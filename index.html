@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Er. Dhruba Paudel — Civil Engineer & Earthquake Engineering Researcher, IOE Thapathali Campus, Tribhuvan University, Nepal." />
+  <title>Er. Dhruba Paudel | Civil Engineer</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- favicon -->
+  <link rel="icon" type="image/png" href="assets/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
+  <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="Dhruba Paudel" />
+  <link rel="manifest" href="assets/favicon/site.webmanifest" />
+</head>
+<body>
+
+<!-- ══ HEADER / NAV ══ -->
+<header>
+
+  <!-- Logo -->
+  <a class="logo" onclick="showPage('home')">
+    <div class="logo-icon">DP</div>
+    <span class="logo-text">Er. Dhruba Paudel</span>
+  </a>
+
+  <!-- Desktop nav (hidden on mobile via CSS) -->
+  <nav>
+    <ul>
+      <li><a id="nav-home"      onclick="showPage('home');      return false;">Home</a></li>
+      <li><a id="nav-about"     onclick="showPage('about');     return false;">About</a></li>
+      <li><a id="nav-services"  onclick="showPage('services');  return false;">Services</a></li>
+      <li><a id="nav-portfolio" onclick="showPage('portfolio'); return false;">Portfolio</a></li>
+      <li><a id="nav-contact"   onclick="showPage('contact');   return false;">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Right controls: dark mode toggle + hamburger -->
+  <div class="nav-right">
+    <div class="nav-toggle" onclick="toggleTheme()" title="Toggle dark mode">🌙</div>
+    <div class="hamburger" id="hamburger" onclick="toggleMobileNav()" title="Menu" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+</header>
+
+<!-- ══ MOBILE NAV DRAWER ══ -->
+<!-- Backdrop overlay — click to close -->
+<div class="mobile-nav-overlay" id="mobile-nav-overlay" onclick="closeMobileNav()"></div>
+
+<!-- Slide-down drawer -->
+<div class="mobile-nav" id="mobile-nav">
+  <ul>
+    <li>
+      <a id="mnav-home" onclick="mobileNavTo('home')">
+        <span class="nav-icon">🏠</span> Home
+      </a>
+    </li>
+    <li>
+      <a id="mnav-about" onclick="mobileNavTo('about')">
+        <span class="nav-icon">👤</span> About
+      </a>
+    </li>
+    <li>
+      <a id="mnav-services" onclick="mobileNavTo('services')">
+        <span class="nav-icon">⚙️</span> Services
+      </a>
+    </li>
+    <li>
+      <a id="mnav-portfolio" onclick="mobileNavTo('portfolio')">
+        <span class="nav-icon">📁</span> Portfolio
+      </a>
+    </li>
+    <li>
+      <a id="mnav-contact" onclick="mobileNavTo('contact')">
+        <span class="nav-icon">✉️</span> Contact
+      </a>
+    </li>
+    <div class="mobile-nav-divider"></div>
+    <li>
+      <a onclick="toggleTheme(); closeMobileNav();">
+        <span class="nav-icon" id="theme-icon-mobile">🌙</span> Toggle Dark Mode
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+<!-- ══ PAGE LAYOUT ══ -->
+<div class="page-wrap">
+
+  <!-- Sidebar — static, never reloaded -->
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-photo">
+        <!--
+          ★ TO ADD YOUR PHOTO:
+          Replace this div with:
+          <img src="assets/photo.jpg" alt="Er. Dhruba Paudel" />
+        -->
+        <!-- <div class="photo-placeholder">👤</div> -->
+        <img src="assets/profile_dhruba-paudel.jpg" alt="Er. Dhruba Paudel" />
+      </div>
+      <div class="sidebar-info">
+        <div class="sidebar-name">Er. Dhruba Paudel</div>
+        <div class="sidebar-role">Civil Engineer</div>
+        <div class="socials">
+          <!-- TODO: Replace # with your real profile URLs -->
+          <a href="https://x.com/dhrubapdl" class="social-btn" title="Twitter/X">𝕏</a>
+          <a href="https://linkedin.com/in/dhrubapdl" target="_blank" rel="noopener" class="social-btn" title="LinkedIn">in</a>
+          <a href="https://facebook.com/dhrubapdl" class="social-btn" title="Facebook">f</a>
+          <a href="https://instagram.com/dhrubapdl" class="social-btn" title="Instagram">ig</a>
+        </div>
+        <!-- TODO: Replace with path to your actual CV file -->
+        <a href="assets/CV_Dhruba Paudel.pdf" class="cv-btn" download>⬇ Download CV</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main — page content injected here by main.js -->
+  <main>
+    <div id="page-content"></div>
+  </main>
+
+</div>
+
+
+<!-- ══ PROJECT DETAIL MODAL ══ -->
+<div class="modal-overlay" id="project-modal">
+  <div class="modal-box">
+
+    <div class="modal-header">
+      <h2 class="modal-title" id="modal-title"></h2>
+      <button class="modal-close" onclick="closeModal()" title="Close">✕</button>
+    </div>
+
+    <div class="modal-body">
+      <span class="modal-badge" id="modal-badge"></span>
+      <p class="modal-desc" id="modal-desc"></p>
+
+      <!-- Type-aware fixed meta (rendered by main.js MODAL_SCHEMAS) -->
+      <div class="modal-meta-grid" id="modal-fixed-meta"></div>
+
+      <!-- Extra meta: software, codes, etc. from p.meta[] -->
+      <div class="modal-meta-grid" id="modal-extra-meta" style="display:none;margin-top:0.75rem;"></div>
+
+      <!-- Key findings -->
+      <div class="modal-findings" id="modal-findings-box">
+        <h4>Key Findings / Highlights</h4>
+        <ul id="modal-findings-list"></ul>
+      </div>
+    </div>
+
+    <!-- Action buttons: DOI, GitHub, Report -->
+    <div class="modal-footer" id="modal-footer"></div>
+
+  </div>
+</div>
+
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <p>© <span id="year"></span> <span>Er. Dhruba Paudel</span> · Civil Engineer · Kathmandu, Nepal</p>
+</footer>
+
+
+<!-- ══ SCRIPTS ══ -->
+<script src="js/projects/academic.js"></script>
+<script src="js/projects/work.js"></script>
+<script src="js/projects/blog.js"></script>
+<script src="js/projects/activities.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+  /* ── Mobile nav controls ── */
+  function toggleMobileNav() {
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    const overlay   = document.getElementById('mobile-nav-overlay');
+    const isOpen    = mobileNav.classList.contains('open');
+    if (isOpen) {
+      closeMobileNav();
+    } else {
+      hamburger.classList.add('open');
+      mobileNav.classList.add('open');
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closeMobileNav() {
+    document.getElementById('hamburger').classList.remove('open');
+    document.getElementById('mobile-nav').classList.remove('open');
+    document.getElementById('mobile-nav-overlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  /* Navigate from mobile menu — closes drawer then loads page */
+  function mobileNavTo(name) {
+    closeMobileNav();
+    showPage(name);
+    // Sync mobile nav active state
+    document.querySelectorAll('.mobile-nav a').forEach(a => a.classList.remove('active'));
+    const mnav = document.getElementById('mnav-' + name);
+    if (mnav) mnav.classList.add('active');
+  }
+
+  /* Keep mobile nav active state in sync with desktop nav */
+  const _origShowPage = showPage;
+  showPage = function(name, category = null) {
+    _origShowPage(name, category);
+    document.querySelectorAll('.mobile-nav a').forEach(a => a.classList.remove('active'));
+    const mnav = document.getElementById('mnav-' + name);
+    if (mnav) mnav.classList.add('active');
+  };
+
+  /* Sync the mobile dark mode icon label */
+  const _origToggleTheme = toggleTheme;
+  toggleTheme = function() {
+    _origToggleTheme();
+    const isDark = document.body.classList.contains('dark');
+    const mIcon = document.getElementById('theme-icon-mobile');
+    if (mIcon) mIcon.textContent = isDark ? '☀️' : '🌙';
+  };
+
+  /* Close mobile nav on Escape */
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeMobileNav();
+  });
+</script>
+
+</body>
+</html>

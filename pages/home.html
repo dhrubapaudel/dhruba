@@ -1,0 +1,100 @@
+<!-- pages/home.html -->
+
+<!-- Hero -->
+<div class="card">
+  <div class="available-badge">Available for Freelancing</div>
+  <h1 class="hero-headline">
+    I'm <span class="highlight">Civil Engineer</span> &amp; Bridging<br/>Vision with Reality
+  </h1>
+  <p class="hero-desc">
+    As a dedicated civil engineer with a profound interest in structural analysis,
+    geotechnical study, and earthquake &amp; disaster resilience projects, I am eager
+    to pursue avenues for continuous learning and professional growth. My motivation
+    stems from the opportunity to contribute my skills and knowledge toward supporting
+    stakeholders in addressing these critical challenges.
+  </p>
+  <div class="edu-grid">
+    <div class="edu-item">
+      <div class="edu-icon teal">🎓</div>
+      <div>
+        <span class="edu-label">MSc. Earthquake Engineering</span>
+        <span class="edu-sub">IOE Thapathali Campus (2024-2026)</span>
+      </div>
+    </div>
+    <div class="edu-item">
+      <div class="edu-icon orange">🎓</div>
+      <div>
+        <span class="edu-label">BE Civil</span>
+        <span class="edu-sub">IOE Pashchimanchal Campus (2018-2023)</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Services preview -->
+<div class="card">
+  <h2 class="section-heading">Engineering <span>Services</span></h2>
+  <div class="services-grid">
+    <div class="service-item reveal"><span class="service-icon">✏️</span><div class="service-name">Designing &amp; Drafting</div></div>
+    <div class="service-item reveal"><span class="service-icon">📊</span><div class="service-name">Structural Analysis</div></div>
+    <div class="service-item reveal"><span class="service-icon">🏗️</span><div class="service-name">Earthquake Resistant Design</div></div>
+    <div class="service-item reveal"><span class="service-icon">💰</span><div class="service-name">Estimation &amp; Costing</div></div>
+    <div class="service-item reveal"><span class="service-icon">🔭</span><div class="service-name">Surveying</div></div>
+    <div class="service-item reveal"><span class="service-icon">👷</span><div class="service-name">Consulting</div></div>
+  </div>
+</div>
+
+<!-- Portfolio preview — each card redirects to its filtered category -->
+<div class="card">
+  <div class="portfolio-header">
+    <div class="portfolio-bg-text">WHAT I'VE DONE</div>
+    <h3>My <span>Portfolio</span></h3>
+  </div>
+  <div class="portfolio-grid">
+
+    <!-- Academic Projects → showPage('portfolio', 'academic') -->
+    <div class="portfolio-item reveal" onclick="showPage('portfolio', 'academic')">
+      <div class="portfolio-thumb" style="background:linear-gradient(135deg,#e8f4f0,#b8ddd4);">
+        📕<div class="portfolio-thumb-overlay">🔎</div>
+      </div>
+      <div class="portfolio-meta">
+        <strong>Academic Projects</strong>
+        <span>Thesis, Papers &amp; Research</span>
+      </div>
+    </div>
+
+    <!-- Work Experience → showPage('portfolio', 'work') -->
+    <div class="portfolio-item reveal" onclick="showPage('portfolio', 'work')">
+      <div class="portfolio-thumb" style="background:linear-gradient(135deg,#eef4ee,#cce0cc);">
+        🏗️<div class="portfolio-thumb-overlay">🔎</div>
+      </div>
+      <div class="portfolio-meta">
+        <strong>Work Experience</strong>
+        <span>Professional Projects</span>
+      </div>
+    </div>
+
+    <!-- Blog Posts → showPage('portfolio', 'blog') -->
+    <div class="portfolio-item reveal" onclick="showPage('portfolio', 'blog')">
+      <div class="portfolio-thumb" style="background:linear-gradient(135deg,#fefce8,#fde68a);">
+        📝<div class="portfolio-thumb-overlay">🔎</div>
+      </div>
+      <div class="portfolio-meta">
+        <strong>Blog Posts</strong>
+        <span>Articles &amp; Writing</span>
+      </div>
+    </div>
+
+    <!-- Extra Activities → showPage('portfolio', 'activities') -->
+    <div class="portfolio-item reveal" onclick="showPage('portfolio', 'activities')">
+      <div class="portfolio-thumb" style="background:linear-gradient(135deg,#fdf4ff,#e9d5ff);">
+        🎯<div class="portfolio-thumb-overlay">🔎</div>
+      </div>
+      <div class="portfolio-meta">
+        <strong>Extra Activities</strong>
+        <span>Workshops, Volunteering &amp; More</span>
+      </div>
+    </div>
+
+  </div>
+</div>

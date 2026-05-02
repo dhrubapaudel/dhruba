@@ -1,0 +1,22 @@
+<!-- pages/portfolio.html -->
+
+<div class="card">
+
+  <div class="portfolio-header">
+    <div class="portfolio-bg-text">WHAT I'VE DONE</div>
+    <h3>My <span>Portfolio</span></h3>
+  </div>
+
+  <!-- Filter tabs — data-cat must match category values in your project files -->
+  <div class="port-tabs">
+    <button class="port-tab" data-cat="all"        onclick="filterPortfolio('all', this)">All</button>
+    <button class="port-tab" data-cat="academic"   onclick="filterPortfolio('academic', this)">Academic Projects</button>
+    <button class="port-tab" data-cat="work"       onclick="filterPortfolio('work', this)">Work Experience</button>
+    <button class="port-tab" data-cat="blog"       onclick="filterPortfolio('blog', this)">Blog Posts</button>
+    <button class="port-tab" data-cat="activities" onclick="filterPortfolio('activities', this)">Extra Activities</button>
+  </div>
+
+  <!-- Cards injected by renderPortfolio() in main.js -->
+  <div class="portfolio-grid" id="portfolio-grid"></div>
+
+</div>
