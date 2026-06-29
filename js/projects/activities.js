@@ -38,7 +38,7 @@ const ACTIVITIES_PROJECTS = [
       { label: "Tools",     value: "Wordpress" },
       { label: "Hosting Server", value: "Babal Host" },
     ],
-    doi: "lgn.edu.np", report: "", github: "",
+    doi: "", report: "", github: "",
   },
 
   {
@@ -61,7 +61,7 @@ const ACTIVITIES_PROJECTS = [
       { label: "Language",     value: "HTML, JS, CSS" },
       { label: "Hosting", value: "Github" },
     ],
-    doi: "dhrubapaudel.com.np", report: "", github: "",
+    doi: "", report: "", github: "",
   },
 
 
