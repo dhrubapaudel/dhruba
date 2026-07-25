@@ -92,7 +92,7 @@ const WORK_PROJECTS = [
   {
     id:           "work-drafting",
     type:         "work",
-    typeLabel:    "Frelencing",
+    typeLabel:    "Freelancing",
     category:     "work",
     title:        "Structural Designing & Drafting — Residential & Commercial Buildings",
     year:         "2023 - 2026",
