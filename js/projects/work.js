@@ -8,6 +8,27 @@
 
 const WORK_PROJECTS = [
 
+    {
+    id:           "work-AEPC",
+    type:         "work",
+    typeLabel:    "Professional Work",
+    category:     "work",
+    title:        "Monitoring of Domestic Bio-Mass energy Plants in Makawanpur and Sindhuli District",
+    year:         "July 2026",
+    status:       "Completed",
+    role:         "Consultant Engineer",
+    organization: "Alternative Energy Promotion Centre (AEPC)",
+    location:     "Makawanpur & Sindhuli",
+    thumb:        "🕵️‍♂️",
+    thumbBg:      "linear-gradient(135deg, #eef4ee, #cce0cc)",
+    description:  `Conducted field monitoring and technical verification of 82 household biogas plants under AEPC's Household Biogas Subsidy Programme (FY 2082/83) across Makawanpur and Sindhuli districts.
+    
+Verified construction quality, technical compliance and beneficiary details against Subsidy Application Forms and NREMIS records over a 7-day field visit.
+
+Authored field monitoring report presenting findings, summary statistics and recommendations for subsidy eligibility,`,
+    
+  },
+
   {
     id:           "work-areicon",
     type:         "work",
