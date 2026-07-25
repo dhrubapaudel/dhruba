@@ -232,9 +232,10 @@ function openModal(projectId) {
   const footer = document.getElementById('modal-footer');
   footer.innerHTML = '';
   if (p.doi)    footer.innerHTML += `<a href="${p.doi}"    target="_blank" rel="noopener" class="btn btn-primary">🔗 View DOI / Full Text</a>`;
+   if (p.link)    footer.innerHTML += `<a href="${p.link}"    target="_blank" rel="noopener" class="btn btn-primary">🔗 View</a>`;
   if (p.github) footer.innerHTML += `<a href="${p.github}" target="_blank" rel="noopener" class="btn btn-outline">💻 GitHub Repository</a>`;
   if (p.report) footer.innerHTML += `<a href="${p.report}" target="_blank" rel="noopener" class="btn btn-outline">📄 View / Download</a>`;
-  if (!p.doi && !p.github && !p.report) {
+  if (!p.doi && !p.link && !p.github && !p.report) {
     footer.innerHTML = `<span style="font-size:0.8rem;color:var(--text-muted);">Full text / link coming soon.</span>`;
   }
 
