@@ -11,7 +11,7 @@ const WORK_PROJECTS = [
     {
     id:           "work-AEPC",
     type:         "work",
-    typeLabel:    "Professional Work",
+    typeLabel:    "Consulting Work",
     category:     "work",
     title:        "Monitoring of Domestic Bio-Mass energy Plants in Makawanpur and Sindhuli District",
     year:         "July 2026",
@@ -21,11 +21,18 @@ const WORK_PROJECTS = [
     location:     "Makawanpur & Sindhuli",
     thumb:        "🕵️‍♂️",
     thumbBg:      "linear-gradient(135deg, #eef4ee, #cce0cc)",
-    description:  `Conducted field monitoring and technical verification of 82 household biogas plants under AEPC's Household Biogas Subsidy Programme (FY 2082/83) across Makawanpur and Sindhuli districts.
+    description:  `Conducted field monitoring and technical verification of 82 household biogas plants under AEPC's Household Biogas Subsidy Programme (FY 2082/83)
+    across Makawanpur and Sindhuli districts.
     
-Verified construction quality, technical compliance and beneficiary details against Subsidy Application Forms and NREMIS records over a 7-day field visit.
+   Verified construction quality, technical compliance and beneficiary details against Subsidy Application Forms and NREMIS records over a 7-day field visit.
 
-Authored field monitoring report presenting findings, summary statistics and recommendations for subsidy eligibility,`,
+   Authored field monitoring report presenting findings, summary statistics and recommendations for subsidy eligibility,`,
+    findings: [],
+    meta: [
+      { label: "Subject", value: "Physics and Mathematics" },
+      { label: "Class",    value: "11 and 12" },
+    ],
+    doi: "", report: "", github: "",
     
   },
 
@@ -85,7 +92,7 @@ Authored field monitoring report presenting findings, summary statistics and rec
   {
     id:           "work-drafting",
     type:         "work",
-    typeLabel:    "Professional Work",
+    typeLabel:    "Frelencing",
     category:     "work",
     title:        "Structural Designing & Drafting — Residential & Commercial Buildings",
     year:         "2023 - 2026",
