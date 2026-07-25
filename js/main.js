@@ -4,8 +4,8 @@
 
 /* ── Merge all project arrays into PROJECTS ── */
 const PROJECTS = [
+   ...WORK_PROJECTS,
   ...ACADEMIC_PROJECTS,
-  ...WORK_PROJECTS,
   ...BLOG_PROJECTS,
   ...ACTIVITIES_PROJECTS,
 ];
